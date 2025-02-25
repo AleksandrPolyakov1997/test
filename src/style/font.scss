@@ -1,0 +1,16 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    src: url('../font/#{$file_name}.eot');
+    src: url('../font/#{$file_name}.eot?#iefix') format('embedded-opentype'),
+    url('../font/#{$file_name}.woff2') format('woff2'),
+    url('../font/#{$file_name}.woff') format('woff'),
+    url('../font/#{$file_name}.ttf') format('truetype');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@include font("Ubuntu", "Ubuntu-Regular", "400", "normal");
+@include font("Ubuntu", "Ubuntu-Medium", "500", "normal");
+@include font("Ubuntu", "Ubuntu-Bold", "700", "normal");
