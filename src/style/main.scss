@@ -3,7 +3,7 @@ $main_color: #9564AA;
 body {
   font-family: 'Ubuntu';
   min-width: 320px;
-  min-height: 100%;
+  box-sizing: border-box;
 }
 
 .header {
@@ -15,14 +15,14 @@ body {
   background-color: $main_color;
 }
 
-.burger-menu {
+.header__burger-menu {
   height: 2px;
   width: 23px;
   background-color: #fff;
   position: relative;
 }
 
-.burger-menu::before {
+.header__burger-menu::before {
   content: '';
   position: absolute;
   height: 2px;
@@ -31,7 +31,7 @@ body {
   bottom: 6px;
 }
 
-.burger-menu::after {
+.header__burger-menu::after {
   content: '';
   position: absolute;
   height: 2px;
@@ -44,12 +44,12 @@ body {
   padding: 15px 20px;
 }
 
-.title {
+.main__title {
   font-weight: 700;
   font-size: 20px;
 }
 
-.seperator {
+.main__seperator {
   height: 2px;
   width: 100%;
   margin-top: 10px;
@@ -59,13 +59,88 @@ body {
 
 .offer {
   margin-top: 23px;
-  margin-left: 20px;
+  
 }
 
-.swiper-slide {
+.card {
   background-color: $main_color;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 20px;
+  position: relative;
+  text-decoration: none;
+}
+
+.swiper-pagination {
+  position: static;
+}
+
+.swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  margin: 0 8px !important;
 }
 
 .swiper-pagination-bullet-active {
   background: #FFC500;
+}
+
+.card__price-container {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  padding: 15px 33px;
+  max-width: 45%;
+}
+
+.card__price {
+  margin-right: 5px;
+}
+
+.card__price_dollar {
+  margin-right: 0;
+}
+
+.card__coin {
+  color: #000;
+  font-size: 8px;
+  width: 17px;
+  height: 17px;
+  background-color: #FFC500;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card__slash {
+  margin: 0 2px;
+  font-weight: 400;
+}
+
+.card__offer {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  background-color: #FFC500;
+  padding: 3px 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: -20px;
+}
+
+.offer__button {
+  width: 100%;
+  margin-top: 34px;
+  padding: 17px ;
+  border: none;
+  border-radius: 10px;
+  background-color: #FFC500;
+  font-size: 16px;
+  font-weight: 700;
 }
