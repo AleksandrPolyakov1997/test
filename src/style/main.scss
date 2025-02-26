@@ -59,7 +59,7 @@ body {
 
 .offer {
   margin-top: 23px;
-  
+
 }
 
 .card {
@@ -137,10 +137,90 @@ body {
 .offer__button {
   width: 100%;
   margin-top: 34px;
-  padding: 17px ;
+  padding: 17px;
   border: none;
   border-radius: 10px;
   background-color: #FFC500;
   font-size: 16px;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.agreement__checkbox {
+  display: block;
+  margin-top: 15px;
+}
+
+.agreement__input {
+  opacity: 0;
+  position: absolute;
+}
+
+.agreement__check {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $main_color;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.agreement__input:checked+.agreement__check {
+  background-color: $main_color;
+}
+
+.agreement__input:checked+.agreement__check::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  top: 6px;
+  right: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.57143L4.63636 7L11 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.agreement__text {
+  margin-left: 30px;
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.agreement__link {
+  text-decoration: none;
+  color: $main_color;
+}
+
+.premium {
+  display: grid;
+  margin-top: 32px;
+}
+
+.diamond {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3px;
+}
+
+.item {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.item__icon{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(149, 100, 170, 0.2);
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item__text {
+  font-size: 12px;
+  font-weight: 700;
+  color: $main_color;
 }

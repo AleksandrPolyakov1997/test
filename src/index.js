@@ -9,7 +9,6 @@ import './style/main.scss'
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-//Swiper
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination, Autoplay],
  spaceBetween: 30,
