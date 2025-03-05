@@ -89,10 +89,6 @@ body {
 
 }
 
-.swiper {
-  display: block;
-}
-
 .swiper-pagination {
   display: block;
 }
@@ -106,6 +102,10 @@ body {
   margin-left: 20px;
   position: relative;
   cursor: pointer;
+}
+
+.card__button {
+  display: none;
 }
 
 .swiper-pagination {
@@ -167,10 +167,6 @@ body {
   border-radius: 5px;
   position: absolute;
   left: -20px;
-}
-
-.offer__card {
-  display: none;
 }
 
 .offer__button {
@@ -446,10 +442,6 @@ body {
     flex: 1 1 auto;
   }
 
-  .swiper {
-    display: none;
-  }
-
   .swiper-pagination {
     display: none;
   }
@@ -517,7 +509,7 @@ body {
     column-gap: 30px;
   }
 
-  .offer__card .card {
+  .card {
     justify-content: center;
     min-width: 150px;
     box-sizing: border-box;
@@ -526,9 +518,8 @@ body {
     padding: 15px;
     background-color: rgba(149, 100, 170, 0.1);
     border: 2px solid $main_color;
-    row-gap: 11px;
     cursor: auto;
-    flex-grow: 1;
+    row-gap: 11px;
   }
 
   .card__price-container {
@@ -536,11 +527,22 @@ body {
     padding: 0;
   }
 
+  .card__slash, .card__price_dollar {
+    display: none;
+  }
+
+  .swiper-slide {
+    width: 0;
+    min-width: 150px;
+    flex-grow: 1;
+  }
+
   .card__background-hover {
     position: absolute;
   }
 
   .card__button {
+    display: block;
     max-width: 185px;
     width: 100%;
     font-size: 16px;
